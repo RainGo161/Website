@@ -1,0 +1,48 @@
+
+.buble-button {
+  position: relative;
+  --c: black;
+  color: var(--c);
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  display: inline-block;
+  z-index: 48; 
+}
+
+.buble-button span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.buble-button:hover {
+    color: white;
+}
+
+.buble-button:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.buble-button span:nth-child(1) {
+  --n: 1;
+}
+
+.buble-button span:nth-child(2) {
+  --n: 2;
+}
+
+.buble-button span:nth-child(3) {
+  --n: 3;
+}
+
+.buble-button span:nth-child(4) {
+  --n: 4;
+}
